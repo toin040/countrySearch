@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CountrySearch - Consulta de Países</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Cabeçalho da aplicação -->
+  <header class="header">
+    <h1>CountrySearch</h1>
+    <p>Consulte e explore informações sobre os países do mundo.</p>
+  </header>
+
+  <main class="container">
+    <!-- Área de pesquisa por nome -->
+    <section class="search-section" aria-labelledby="search-heading">
+      <h2 id="search-heading">Pesquisar países</h2>
+
+      <form id="search-form" role="search">
+        <div class="field">
+          <label for="search-input">Nome do país</label>
+          <input
+            id="search-input"
+            name="name"
+            type="search"
+            placeholder="Ex.: Brazil"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="actions">
+          <button type="submit">Pesquisar</button>
+        </div>
+      </form>
+
+      <!-- Região de status com feedback para o usuário (carregando, sucesso, vazio, erro) -->
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Área de listagem de países -->
+    <section class="list-section" aria-labelledby="list-heading">
+      <h2 id="list-heading">Lista de países</h2>
+      <!-- A lista é preenchida dinamicamente pelo JavaScript -->
+      <ul id="country-list" class="country-list"></ul>
+    </section>
+  </main>
+
+  <!-- Janela de detalhes do país selecionado -->
+  <dialog id="detail-dialog" class="dialog" aria-labelledby="detail-title">
+    <article class="detail">
+      <h2 id="detail-title">Detalhes do país</h2>
+      <!-- O conteúdo dos detalhes é preenchido dinamicamente pelo JavaScript -->
+      <div id="detail-content"></div>
+      <form method="dialog" class="detail-actions">
+        <button type="submit">Fechar</button>
+      </form>
+    </article>
+  </dialog>
+
+  <!-- Rodapé com a fonte dos dados -->
+  <footer class="footer">
+    <p>
+      Dados fornecidos pela
+      <a href="https://countriesnow.space/" target="_blank" rel="noopener">CountriesNow API</a>.
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
