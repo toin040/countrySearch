@@ -2,8 +2,8 @@
 
 ## Integrantes
 
-- Integrante 1 (nome completo)
-- Integrante 2 (nome completo)
+Antônio Lucas de Oliveira Neto
+Enzo Rios Veras Ost Lopes
 
 ## Nome e descrição do projeto
 
